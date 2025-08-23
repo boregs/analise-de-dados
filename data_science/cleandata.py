@@ -43,7 +43,7 @@ df_vendas.to_csv('vendas_produtos_limpo.csv', index=False)
 df_limpo = pd.read_csv(r'data_science\database\vendas_produtos_limpo.csv')
 
 # rrotudos mais comprados
-def tendencia_produtos_comprados():
+def produtos_mais_comprados():
     vendas_por_produto = df_vendas.groupby('nome_produto')['quantidade'].sum() # agrupa os produtos com suas respectivas quantidades de vendas dentro de toda database
     vendas_por_produto = vendas_por_produto.sort_values(ascending=False) # arruma em ordem decrescente
 
@@ -55,9 +55,10 @@ def tendencia_produtos_comprados():
     plt.bar(produtos, quantidades, color='lightblue')
     plt.xlabel("Produtos")
     plt.ylabel("Quantidade de vendas")
-    plt.title("Produtos mais comprados no mês de Julho")
+    plt.title("Durante a semana x% dos Lucros vieram do")
     plt.xticks(produtos, rotation=45, fontsize=8) # rotaciona os nomes dos produtos no grafico e altera a fonte deles
     plt.show()
+
 
 # metodo de pagamento mais usado
 def metodo_pagamento():
@@ -71,8 +72,46 @@ def metodo_pagamento():
     plt.figure(figsize=(8,5)) # ajeita o tamanho da figura
     plt.bar(forma, quantidade, color='lightblue')
     plt.xlabel("Produtos")
-    plt.ylabel("Quantidade de vendas")
-    plt.title("Produtos mais comprados no mês de Julho")
+    plt.ylabel("Quantidade de vendas") 
+    plt.title("Pix é a forma de pagamento mais escolhida estando em 50% das vendas")
     plt.xticks(forma, rotation=45, fontsize=8) # rotaciona os nomes dos produtos no grafico e altera a fonte deles
     plt.show()
 
+# lucro diario
+def lucro_diario():
+    df_limpo['data_venda'] = pd.to_datetime(df_limpo['data_venda'],format='mixed', dayfirst=True)
+    df_limpo['data_venda'] = df_limpo['data_venda'].dt.strftime('%d/%m/%Y')
+    lucro = df_limpo.groupby('data_venda')['total_venda'].sum()
+
+    fig, ax = plt.subplots(figsize=(12, 6))
+
+    # Plotar o gráfico de barras
+    barras = ax.bar(lucro.index, lucro.values, color='skyblue')
+
+    # --- Adicionar os valores em cima de cada barra ---
+    for barra in barras:
+    # A altura da barra é o valor que queremos exibir
+        altura = barra.get_height()
+    
+        # Adicionar o texto na posição correta
+        ax.text(
+        # Posição X: centro da barra
+        barra.get_x() + barra.get_width() / 2, 
+        # Posição Y: um pouco acima do topo da barra
+        altura + 50,  
+        # Texto a ser exibido, formatado para 2 casas decimais
+        f'R$ {altura:,.2f}',
+        # Alinhamento horizontal: centralizado
+        ha='center', 
+        # Cor e tamanho da fonte
+        color='black',
+        fontsize=9
+    )
+    datas_teste = lucro.index
+    plt.xlabel('Dias')
+    plt.ylabel('Lucro')
+    plt.xticks(datas_teste, rotation=45, fontsize=8)
+    plt.title('No dia 01/07 atingimos um lucro aproximadamente 250% maior que a média diária')
+    plt.show()
+
+produtos_mais_comprados()
