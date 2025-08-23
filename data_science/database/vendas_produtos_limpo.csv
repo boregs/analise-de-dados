@@ -1,0 +1,31 @@
+data_venda,id_produto,nome_produto,categoria,marca,quantidade,valor_unitario,total_venda,metodo_pagamento,id_cliente,regiao
+01/07/2025,101,Smartphone X,Smartphones,TechCorp,1.0,2500.0,2500.0,Cartao de Credito,C001,Sudeste
+01/07/2025,102,Notebook Y,Notebooks,Innovate,1.0,4500.0,4500.0,Boleto,C002,Nordeste
+02/07/2025,103,Fone de Ouvido Z,Acessorios,SoundWave,2.0,150.0,300.0,Pix,C003,Sul
+02/07/2025,101,Smartphone X,Smartphones,TechCorp,1.0,2500.0,2500.0,Cartao de Credito,C001,Sudeste
+03/07/2025,104,Smartwatch A,Wearables,Innovate,1.0,800.0,800.0,Pix,C004,Norte
+03/07/2025,105,Teclado Mecanico,Perifericos,GamerGear,1.0,350.0,350.0,Cartao de Debito,C005,Centro-Oeste
+04/07/2025,106,Mouse sem Fio,Perifericos,Logitech,3.0,80.0,240.0,Pix,C006,Sudeste
+04/07/2025,107,Monitor Ultrawide,Monitores,ScreenMax,1.0,1200.0,1200.0,Boleto,C007,Nordeste
+05/07/2025,108,Webcam HD,Acessorios,TechCorp,1.0,200.0,200.0,Cartao de Credito,C008,Sul
+05/07/2025,109,Caixa de Som Portatil,Audio,SoundWave,2.0,250.0,500.0,Pix,C009,Sudeste
+06/07/2025,110,Tablet Pro,Tablets,Innovate,1.0,1800.0,1800.0,Cartao de Credito,C010,Norte
+06/07/2025,101,SmartPhone X,Smartphones,TechCorp,1.0,2500.0,2500.0,Cartao de Credito,C011,Centro-Oeste
+07/07/2025,102,Notebook Y,Notebooks,Innovate,1.0,4500.0,4500.0,Pix,C012,Sudeste
+07/07/2025,103,Fone de Ouvido Z,Acessorios,SoundWave,1.0,150.0,150.0,Cartao de Debito,C013,Nordeste
+08/07/2025,104,Smartwatch A,Wearables,Innovate,2.0,800.0,1600.0,Boleto,C014,Sul
+08/07/2025,105,Teclado Mecanico,Perifericos,GamerGear,1.0,350.0,350.0,Pix,C015,Sudeste
+09/07/2025,106,Mouse sem Fio,Perifericos,Logitech,1.0,80.0,80.0,Cartao de Credito,C016,Norte
+09/07/2025,107,Monitor Ultrawide,Monitores,ScreenMax,1.0,1200.0,1200.0,Pix,C017,Centro-Oeste
+10/07/2025,108,Webcam HD,Acessorios,TechCorp,2.0,200.0,400.0,Cartao de Credito,C018,Sudeste
+10/07/2025,109,Caixa de Som Portatil,Audio,SoundWave,1.0,250.0,250.0,Boleto,C019,Nordeste
+11/07/2025,111,Fone de Ouvido,Acessorios,AudioTech,1.0,100.0,100.0,Cartao de Credito,C020,Norte
+11/07/2025,112,Laptop,Notebooks,Innovate,1.0,2000.0,2000.0,Pix,C021,Sul
+12/07/2025,113,Cabo USB,Acessorios,Sem Marca,1.0,25.0,25.0,Cartao de Debito,C022,Nordeste
+12/07/2025,101,Smartphone X,Smartphones,TechCorp,1.0,2500.0,2500.0,Cartao de Credito,C001,Sudeste
+13/07/2025,109,Caixa de Som Portatil,Audio,SoundWave,2.0,250.0,500.0,Pix,C009,Sudeste
+13/07/2025,103,Fone de Ouvido Z,Acessorios,SoundWave,1.0,150.0,150.0,Cartao de Credito,C023,Sul
+14/07/2025,106,Mouse sem Fio,Perifericos,Logitech,1.0,80.0,80.0,Boleto,C016,Norte
+14/07/2025,114,TV LED 50',Televisores,ScreenMax,1.0,3500.0,3500.0,Pix,C024,Centro-Oeste
+15/07/2025,115,Relógio Inteligente,Wearables,Innovate,1.0,900.0,900.0,Cartao de Credito,C025,Sudeste
+15/07/2025,116,Fone de ouvido,Acessorios,AudioTech,1.0,100.0,100.0,Cartao de Debito,C026,Nordeste
